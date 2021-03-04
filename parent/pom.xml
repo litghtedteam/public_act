@@ -7,6 +7,12 @@
 	<groupId>com.example</groupId>
 	<artifactId>parart</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<repoToken></repoToken>
+	</properties>
 	<name>par</name>
         <packaging>pom</packaging>
  
@@ -29,6 +35,18 @@
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.eluder.coveralls</groupId>
+				<artifactId>coveralls-maven-plugin</artifactId>
+				<version>4.3.0</version>
+				<configuration>
+					<repoToken>${repoToken}</repoToken>
+					<jacocoReports>
+						<jacocoReport>${project.basedir}/demo/target/site/jacoco-aggregate/jacoco.xml</jacocoReport>
+						<jacocoReport>${project.basedir}/apps/target/site/jacoco-aggregate/jacoco.xml</jacocoReport>
+					</jacocoReports>
+				</configuration>
+			</plugin>
+			<plugin>
 				<groupId>org.jacoco</groupId>
 				<artifactId>jacoco-maven-plugin</artifactId>
 				<version>0.8.4</version>
@@ -41,6 +59,7 @@
 						</goals>
 					</execution>
 				</executions>
+
 			</plugin>
 		</plugins>
 	</build>

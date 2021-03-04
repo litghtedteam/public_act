@@ -15,11 +15,11 @@ public class ServletInitializer extends SpringBootServletInitializer {
 	}
 
 	public String abcd2(){
-		return "abc2";
+		return "abc";
 	}
 
 	public String abcd3(){
-		return "abc2";
+		return "abc";
 	}
 
 
