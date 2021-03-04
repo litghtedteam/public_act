@@ -56,4 +56,10 @@ public class ServletInitializerTest {
         ServletInitializer a = new ServletInitializer();
         assertThat(a.abcd7(),is("abc"));
     }
+
+    @Test
+    public void aaaa8(){
+        ServletInitializer a = new ServletInitializer();
+        assertThat(a.abcd8(),is("abc"));
+    }
 }
