@@ -22,8 +22,14 @@ public class ServletInitializerTest {
         assertThat(a.abcd(),is("abc"));
     }
     @Test
-    public void aaaa3(){
+    public void aaaa22(){
         ServletInitializer a = new ServletInitializer();
         assertThat(a.abcd2(),is("abc"));
+    }
+
+    @Test
+    public void aaaa3(){
+        ServletInitializer a = new ServletInitializer();
+        assertThat(a.abcd3(),is("abc"));
     }
 }
