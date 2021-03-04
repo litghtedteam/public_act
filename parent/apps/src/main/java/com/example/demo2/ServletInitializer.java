@@ -22,5 +22,7 @@ public class ServletInitializer extends SpringBootServletInitializer {
 		return "abc";
 	}
 
-
+	public String abcd4(){
+		return "abc";
+	}
 }
