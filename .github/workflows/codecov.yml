@@ -26,5 +26,5 @@ jobs:
       working-directory: ./parent
     - uses: actions/upload-artifact@v2
       with:
-        name: jacoco.xml
-        path: /home/runner/work/public_act/public_act/parent/apps/target/site/jacoco-aggregate/jacoco.xml
+        name: jacoco
+        path: /home/runner/work/public_act/public_act/parent/apps/target/site/jacoco-aggregate
