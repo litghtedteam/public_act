@@ -50,6 +50,7 @@
 						<sourceDirectory>${project.basedir}/demo/src</sourceDirectory>
 						<sourceDirectory>${project.basedir}/apps/src</sourceDirectory>
 					</sourceDirectories>
+					<scanForSources>true</scanForSources>
 				</configuration>
 				<dependencies>
 					<dependency>
