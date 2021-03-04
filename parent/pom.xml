@@ -46,6 +46,11 @@
 						<jacocoReport>${project.basedir}/demo/target/site/jacoco-aggregate/jacoco.xml</jacocoReport>
 						<jacocoReport>${project.basedir}/apps/target/site/jacoco-aggregate/jacoco.xml</jacocoReport>
 					</jacocoReports>
+					<sourceDirectories>
+						<sourceDirectory>${project.basedir}/demo/src</sourceDirectory>
+						<sourceDirectory>${project.basedir}/apps/src</sourceDirectory>
+					</sourceDirectories>
+					<scanForSources>true</scanForSources>
 				</configuration>
 				<dependencies>
 					<dependency>
