@@ -1,4 +1,4 @@
-name: codecov
+name: build
 
 on:
   push:
@@ -24,10 +24,5 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
     - name: Test with Maven
-      run: mvn --batch-mode --update-snapshots test jacoco:report-aggregate
+      run: mvn --batch-mode --update-snapshots test jacoco:report-aggregate coveralls:report -DrepoToken=${{ secrets.COVERALLS_TOKEN }}
       working-directory: ./parent
-    - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        directory: parent/target/site/jacoco-aggregate
