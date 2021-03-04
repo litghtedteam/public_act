@@ -24,3 +24,7 @@ jobs:
     - name: Test with Maven
       run: mvn --batch-mode --update-snapshots test jacoco:report-aggregate coveralls:report -DpullRequest=${{ github.event.pull_request.number }} -DrepoToken=${{ secrets.COVERALLS_TOKEN }}
       working-directory: ./parent
+    - uses: actions/upload-artifact@v2
+      with:
+        name: jacoco.xml
+        path: /home/runner/work/public_act/public_act/parent/apps/target/site/jacoco-aggregate/jacoco.xml
